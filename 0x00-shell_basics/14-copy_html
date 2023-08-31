@@ -1,2 +1,25 @@
 #!/bin/bash
-rsync --ignore-existing --update -av --include='*.html' --exclude='*' . ..
+
+# Set paths for the current working directory and its parent
+current_dir=$(pwd)
+parent_dir=$(dirname "$current_dir")
+
+# Loop through HTML files in the current directory
+for html_file in "$current_dir"/*.html; do
+    file_name=$(basename "$html_file")
+    parent_file="$parent_dir/$file_name"
+
+    # Check if the file doesn't exist in the parent directory
+    if [ ! -e "$parent_file" ]; then
+        cp "$html_file" "$parent_dir"
+        echo "Copied $file_name to parent directory."
+    else
+        # Check if the file in the current directory is newer
+        if [ "$html_file" -nt "$parent_file" ]; then
+            cp "$html_file" "$parent_dir"
+            echo "Updated $file_name in parent directory."
+        fi
+    fi
+done
+
+echo "HTML file copying complete."
