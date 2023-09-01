@@ -1,4 +1,2 @@
 #!/bin/bash
-current_user=$(whoami)
-user_groups=$(groups $current_user)
-echo $user_groups
+groups $(whoami) | tr ' ' '\n'
