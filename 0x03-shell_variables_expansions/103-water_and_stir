@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -n "${WATER//[^0-9]/}" | tr 'water' '01234' | bc | tr '01234' 'bestchol'
