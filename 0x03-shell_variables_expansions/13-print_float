@@ -1,2 +1,3 @@
 #!/bin/bash
-if [ -n "$NUM" ]; then printf "%.2f\n" "$NUM"; fi
+printf "%.2f\n" "$NUM"
+
