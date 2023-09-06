@@ -1,23 +1,2 @@
 #!/bin/bash
-
-# Star Wars Episode IV: A New Hope - Opening Crawl
-cat << "EOF"
-       .  .                   .
-      .     . , "The ASCII Force"
- .          .        .
-    .    .    "A New Hope"
- .       .    .    .
-        .  .        .       .
-
-A long time ago in a galaxy far, far away...
-    _______   .  *  .     *  .  _______ 
- .   /  /\   *  .    .    .  *  /  /\   . 
-    /  / / /      .     .     .   / / / /  
- . /_/_/ /  .  *    .  *  .   /_/_/ /   
-     | |  .    *  .  *  .  .   | | 
-.  *  | | *  .   .  .  .  *    | |   *  .  
-  .   | | .   *  .     .   .  | |  .
-      | |  .  *  .  *  .  *  .  | |     . 
- . *  | |.  *  .    .     .   | |  *  .  . 
-_____ |_|_______.__________|_|_______._________ 
-EOF
+telnet towel.blinkenlights.nl
