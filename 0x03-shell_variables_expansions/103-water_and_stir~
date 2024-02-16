@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$(WATER)" | tr -cd '0-9' | "$(STIR)" | tr -cd '0-9'
