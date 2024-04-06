@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Run Apache on the 265-0 Docker container.
 echo "ServerName localhost" >> /etc/apache2.conf
 service apache2 start
+=======
+# Start Apache so as to return a
+# page conatining Hello Holberton
+sudo service apache2 start
+>>>>>>> e708a75d6c97d028106b691f44906d68b310c345
